@@ -1,0 +1,28 @@
+.DS_Store
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+build/
+.swiftpm/
+.netrc
+.artifacts/
+
+# Xcode project is not checked in for a SwiftPM library.
+*.xcodeproj/
+
+# Secrets — never commit signing material or API keys.
+*.p8
+*.p12
+*.cer
+*.mobileprovision
+AuthKey_*
+
+# Node (markdown lint tooling)
+node_modules/
+
+# SourceKit-LSP / build-server (local, machine-specific)
+.sourcekit-lsp/
+.compile
+buildServer.json
+.vscode/

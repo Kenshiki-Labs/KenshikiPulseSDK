@@ -1,0 +1,31 @@
+# Periphery (dead-code) config for the Kenshiki Device SDK package.
+#
+# This is a library whose public API is consumed externally (the Pulse app target and, later,
+# the backend), so public declarations must be retained — otherwise every public symbol looks
+# unused. Assign-only analysis is disabled because the SDK is mostly Codable envelopes whose
+# properties are populated for JSON encoding (Periphery reads that as write-only).
+retain_public: true
+retain_assign_only_properties: true
+
+index_exclude:
+  - "spec/**"
+  - "docs/**"
+  - "Documentation/**"
+  - "node_modules/**"
+  - "**/*.md"
+  - "**/*.markdown"
+  - "**/*.yaml"
+  - "**/*.yml"
+
+# ⚠️ ACCURACY CAVEAT — read before trusting results.
+# `periphery scan` (no args) builds this package for the HOST (macOS). This SDK is heavily
+# guarded by `#if os(iOS)` / `canImport(CoreMotion|CoreTelephony)`, so iOS-only code paths are
+# compiled OUT on macOS and their call sites become invisible — producing FALSE "unused"
+# findings (e.g. helpers used only inside `#if os(iOS)` blocks).
+#
+# For accurate results, scan the iOS app build instead (it compiles the iOS paths):
+#   periphery scan \
+#     --schemes KenshikiPulseDemo --targets KenshikiPulseDemo \
+#     --retain-public --retain-assign-only-properties
+#
+# Always confirm a finding is truly uncalled (grep the symbol) before deleting.

@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "pulse-continuity-trace.v1",
+  "suite": "adversarial-v1",
+  "traces": [
+    {
+      "id": "all_permissions_denied",
+      "label": "All permissions denied",
+      "kind": "adversarial",
+      "collectedAtUnix": 1782417600,
+      "nowUnix": 1782417600,
+      "previousFingerprint": null,
+      "signals": {
+        "battery": { "support": { "status": "unavailable" } },
+        "motion": { "support": { "status": "unavailable" }, "sampleCount": 0 },
+        "magnetometer": { "support": { "status": "unavailable" }, "sampleCount": 0 },
+        "barometer": { "support": { "status": "unavailable" } },
+        "ambientLight": { "support": { "status": "unavailable" } },
+        "mediaOutput": { "support": { "status": "unavailable" } },
+        "displayProjection": { "support": { "status": "unavailable" } },
+        "connectivity": {
+          "support": { "status": "unavailable" },
+          "interfaceTypes": [],
+          "availableInterfaceTypes": [],
+          "perInterfacePathStatuses": {}
+        },
+        "bluetooth": { "support": { "status": "unavailable" } },
+        "deviceSurface": {
+          "support": { "status": "available" },
+          "platform": "iOS",
+          "systemName": "iOS",
+          "systemMajorVersion": 18,
+          "interfaceIdiom": "phone",
+          "simulator": false
+        },
+        "telephony": { "support": { "status": "unavailable" }, "radioGenerations": [] }
+      },
+      "expected": {
+        "breakReason": null,
+        "networkStability": "unknown",
+        "minUnavailable": 10,
+        "maxUnavailable": 10,
+        "minContradictory": 0,
+        "minStale": 0,
+        "minBreadth": 0.16,
+        "maxBreadth": 0.17,
+        "minCoverage": 1.0,
+        "maxCoverage": 1.0
+      }
+    },
+    {
+      "id": "network_absent_is_neutral",
+      "label": "Network absent is neutral",
+      "kind": "adversarial",
+      "collectedAtUnix": 1782417600,
+      "nowUnix": 1782417600,
+      "previousFingerprint": {
+        "platform": "iOS",
+        "systemMajor": 18,
+        "idiom": "phone",
+        "simInserted": true,
+        "cellularRestricted": "not_restricted",
+        "wifiNetworkHash": "known-network"
+      },
+      "signals": {
+        "battery": { "support": { "status": "available" }, "level": 0.8 },
+        "motion": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "userAccelerationMagnitude": 0.1
+        },
+        "magnetometer": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "fieldMagnitudeMicrotesla": 41,
+          "calibrationAccuracy": "high"
+        },
+        "barometer": { "support": { "status": "available" }, "pressureKilopascals": 101.2 },
+        "ambientLight": { "support": { "status": "available" }, "screenBrightnessLevel": 0.4 },
+        "mediaOutput": {
+          "support": { "status": "available" },
+          "routeClass": "speaker",
+          "external": false,
+          "otherAudioPlaying": false
+        },
+        "displayProjection": {
+          "support": { "status": "available" },
+          "screenCaptured": false,
+          "externalDisplayCount": 0,
+          "projectionStatus": "local"
+        },
+        "connectivity": {
+          "support": { "status": "available" },
+          "pathStatus": "satisfied",
+          "interfaceTypes": ["cellular"],
+          "availableInterfaceTypes": ["cellular"],
+          "perInterfacePathStatuses": {}
+        },
+        "bluetooth": {
+          "support": { "status": "available" },
+          "authorization": "allowed",
+          "radioState": "powered_on",
+          "scanAvailable": true,
+          "audioRouteClass": "none",
+          "audioRouteConnected": false
+        },
+        "deviceSurface": {
+          "support": { "status": "available" },
+          "platform": "iOS",
+          "systemName": "iOS",
+          "systemMajorVersion": 18,
+          "interfaceIdiom": "phone",
+          "simulator": false
+        },
+        "telephony": {
+          "support": { "status": "available" },
+          "simInserted": true,
+          "radioGenerations": ["5g"],
+          "serviceCount": 1,
+          "radioVisibility": "visible"
+        }
+      },
+      "expected": {
+        "breakReason": null,
+        "networkStability": "unknown",
+        "minUnavailable": 0,
+        "maxUnavailable": 0,
+        "minContradictory": 0,
+        "minStale": 0,
+        "minBreadth": 1.0,
+        "maxBreadth": 1.0,
+        "minCoverage": 1.0,
+        "maxCoverage": 1.0
+      }
+    },
+    {
+      "id": "known_network_changed_soft_only",
+      "label": "Known network changed, soft coherence only",
+      "kind": "adversarial",
+      "collectedAtUnix": 1782417600,
+      "nowUnix": 1782417600,
+      "previousFingerprint": {
+        "platform": "iOS",
+        "systemMajor": 18,
+        "idiom": "phone",
+        "simInserted": true,
+        "cellularRestricted": "not_restricted",
+        "wifiNetworkHash": "known-network"
+      },
+      "signals": {
+        "battery": { "support": { "status": "available" }, "level": 0.8 },
+        "motion": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "userAccelerationMagnitude": 0.1
+        },
+        "magnetometer": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "fieldMagnitudeMicrotesla": 41,
+          "calibrationAccuracy": "high"
+        },
+        "barometer": { "support": { "status": "available" }, "pressureKilopascals": 101.2 },
+        "ambientLight": { "support": { "status": "available" }, "screenBrightnessLevel": 0.4 },
+        "mediaOutput": {
+          "support": { "status": "available" },
+          "routeClass": "speaker",
+          "external": false,
+          "otherAudioPlaying": false
+        },
+        "displayProjection": {
+          "support": { "status": "available" },
+          "screenCaptured": false,
+          "externalDisplayCount": 0,
+          "projectionStatus": "local"
+        },
+        "connectivity": {
+          "support": { "status": "available" },
+          "pathStatus": "satisfied",
+          "interfaceTypes": ["wifi"],
+          "availableInterfaceTypes": ["wifi", "cellular"],
+          "perInterfacePathStatuses": {},
+          "wifiNetworkHash": "other-network"
+        },
+        "bluetooth": {
+          "support": { "status": "available" },
+          "authorization": "allowed",
+          "radioState": "powered_on",
+          "scanAvailable": true,
+          "audioRouteClass": "none",
+          "audioRouteConnected": false
+        },
+        "deviceSurface": {
+          "support": { "status": "available" },
+          "platform": "iOS",
+          "systemName": "iOS",
+          "systemMajorVersion": 18,
+          "interfaceIdiom": "phone",
+          "simulator": false
+        },
+        "telephony": {
+          "support": { "status": "available" },
+          "simInserted": true,
+          "radioGenerations": ["5g"],
+          "serviceCount": 1,
+          "radioVisibility": "visible"
+        }
+      },
+      "expected": {
+        "breakReason": null,
+        "networkStability": "changed",
+        "minUnavailable": 0,
+        "maxUnavailable": 0,
+        "minContradictory": 0,
+        "minStale": 0,
+        "minBreadth": 1.0,
+        "maxBreadth": 1.0,
+        "minCoverage": 1.0,
+        "maxCoverage": 1.0
+      }
+    },
+    {
+      "id": "bluetooth_denied_without_route",
+      "label": "Bluetooth denied without route",
+      "kind": "adversarial",
+      "collectedAtUnix": 1782417600,
+      "nowUnix": 1782417600,
+      "previousFingerprint": null,
+      "signals": {
+        "battery": { "support": { "status": "available" }, "level": 0.8 },
+        "motion": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "userAccelerationMagnitude": 0.1
+        },
+        "magnetometer": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "fieldMagnitudeMicrotesla": 41,
+          "calibrationAccuracy": "high"
+        },
+        "barometer": { "support": { "status": "available" }, "pressureKilopascals": 101.2 },
+        "ambientLight": { "support": { "status": "available" }, "screenBrightnessLevel": 0.4 },
+        "mediaOutput": {
+          "support": { "status": "available" },
+          "routeClass": "speaker",
+          "external": false,
+          "otherAudioPlaying": false
+        },
+        "displayProjection": {
+          "support": { "status": "available" },
+          "screenCaptured": false,
+          "externalDisplayCount": 0,
+          "projectionStatus": "local"
+        },
+        "connectivity": {
+          "support": { "status": "available" },
+          "pathStatus": "satisfied",
+          "interfaceTypes": ["wifi"],
+          "availableInterfaceTypes": ["wifi", "cellular"],
+          "perInterfacePathStatuses": {}
+        },
+        "bluetooth": {
+          "support": { "status": "available" },
+          "authorization": "denied",
+          "radioState": "unauthorized",
+          "scanAvailable": false,
+          "audioRouteClass": "none",
+          "audioRouteConnected": false
+        },
+        "deviceSurface": {
+          "support": { "status": "available" },
+          "platform": "iOS",
+          "systemName": "iOS",
+          "systemMajorVersion": 18,
+          "interfaceIdiom": "phone",
+          "simulator": false
+        },
+        "telephony": {
+          "support": { "status": "available" },
+          "simInserted": true,
+          "radioGenerations": ["5g"],
+          "serviceCount": 1,
+          "radioVisibility": "visible"
+        }
+      },
+      "expected": {
+        "breakReason": null,
+        "networkStability": "unknown",
+        "minUnavailable": 1,
+        "maxUnavailable": 1,
+        "minContradictory": 0,
+        "minStale": 0,
+        "minBreadth": 1.0,
+        "maxBreadth": 1.0,
+        "minCoverage": 1.0,
+        "maxCoverage": 1.0
+      }
+    },
+    {
+      "id": "stale_foreground_snapshot",
+      "label": "Stale foreground snapshot",
+      "kind": "adversarial",
+      "collectedAtUnix": 1782417600,
+      "nowUnix": 1782763200,
+      "previousFingerprint": null,
+      "signals": {
+        "battery": { "support": { "status": "available" }, "level": 0.8 },
+        "motion": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "userAccelerationMagnitude": 0.1
+        },
+        "magnetometer": {
+          "support": { "status": "available" },
+          "sampleCount": 1,
+          "fieldMagnitudeMicrotesla": 41,
+          "calibrationAccuracy": "high"
+        },
+        "barometer": { "support": { "status": "available" }, "pressureKilopascals": 101.2 },
+        "ambientLight": { "support": { "status": "available" }, "screenBrightnessLevel": 0.4 },
+        "mediaOutput": {
+          "support": { "status": "available" },
+          "routeClass": "speaker",
+          "external": false,
+          "otherAudioPlaying": false
+        },
+        "displayProjection": {
+          "support": { "status": "available" },
+          "screenCaptured": false,
+          "externalDisplayCount": 0,
+          "projectionStatus": "local"
+        },
+        "connectivity": {
+          "support": { "status": "available" },
+          "pathStatus": "satisfied",
+          "interfaceTypes": ["wifi"],
+          "availableInterfaceTypes": ["wifi", "cellular"],
+          "perInterfacePathStatuses": {}
+        },
+        "bluetooth": {
+          "support": { "status": "available" },
+          "authorization": "allowed",
+          "radioState": "powered_on",
+          "scanAvailable": true,
+          "audioRouteClass": "none",
+          "audioRouteConnected": false
+        },
+        "deviceSurface": {
+          "support": { "status": "available" },
+          "platform": "iOS",
+          "systemName": "iOS",
+          "systemMajorVersion": 18,
+          "interfaceIdiom": "phone",
+          "simulator": false
+        },
+        "telephony": {
+          "support": { "status": "available" },
+          "simInserted": true,
+          "radioGenerations": ["5g"],
+          "serviceCount": 1,
+          "radioVisibility": "visible"
+        }
+      },
+      "expected": {
+        "breakReason": null,
+        "networkStability": "unknown",
+        "minUnavailable": 0,
+        "maxUnavailable": 0,
+        "minContradictory": 0,
+        "minStale": 10,
+        "minBreadth": 1.0,
+        "maxBreadth": 1.0,
+        "minCoverage": 0.0,
+        "maxCoverage": 0.0
+      }
+    },
+    {
+      "id": "telephony_contradiction",
+      "label": "SIM absent while radio evidence exists",
+      "kind": "adversarial",
+      "collectedAtUnix": 1782417600,
+      "nowUnix": 1782417600,
+      "previousFingerprint": null,
+      "signals": {
+        "battery": { "support": { "status": "available" }, "level": 0.8 },
+        "motion": { "support": { "status": "unavailable" }, "sampleCount": 0 },
+        "magnetometer": { "support": { "status": "unavailable" }, "sampleCount": 0 },
+        "barometer": { "support": { "status": "unavailable" } },
+        "ambientLight": { "support": { "status": "unavailable" } },
+        "mediaOutput": { "support": { "status": "unavailable" } },
+        "displayProjection": { "support": { "status": "unavailable" } },
+        "connectivity": {
+          "support": { "status": "unavailable" },
+          "interfaceTypes": [],
+          "availableInterfaceTypes": [],
+          "perInterfacePathStatuses": {}
+        },
+        "bluetooth": { "support": { "status": "unavailable" } },
+        "deviceSurface": {
+          "support": { "status": "available" },
+          "platform": "iOS",
+          "systemName": "iOS",
+          "systemMajorVersion": 18,
+          "interfaceIdiom": "phone",
+          "simulator": false
+        },
+        "telephony": {
+          "support": { "status": "available" },
+          "simInserted": false,
+          "radioGenerations": ["5g"],
+          "serviceCount": 1,
+          "dataServiceAvailable": true
+        }
+      },
+      "expected": {
+        "breakReason": null,
+        "networkStability": "unknown",
+        "minUnavailable": 8,
+        "maxUnavailable": 8,
+        "minContradictory": 1,
+        "minStale": 0,
+        "minBreadth": 0.5,
+        "maxBreadth": 0.5,
+        "minCoverage": 0.66,
+        "maxCoverage": 0.67
+      }
+    }
+  ]
+}

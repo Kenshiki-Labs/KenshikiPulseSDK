@@ -1,0 +1,69 @@
+# SwiftLint config for the Kenshiki Pulse SDK.
+# Run: swiftlint lint
+
+included:
+  - Sources
+  - Tests
+
+excluded:
+  - .build
+
+# Opt-in rules worth enforcing in this codebase (warnings by default).
+opt_in_rules:
+  - force_unwrapping
+  - empty_count
+  - first_where
+  - contains_over_filter_count
+  - contains_over_first_not_nil
+  - redundant_nil_coalescing
+  - closure_spacing
+  - explicit_init
+  - last_where
+  - sorted_first_last
+  - toggle_bool
+  - yoda_condition
+
+analyzer_rules:
+  - unused_import
+
+disabled_rules:
+  - todo
+  - trailing_comma
+
+line_length:
+  warning: 140
+  error: 300
+  ignores_comments: true
+  ignores_urls: true
+
+file_length:
+  warning: 900
+  error: 1200
+
+type_body_length:
+  warning: 400
+  error: 800
+
+function_body_length:
+  warning: 80
+  error: 140
+
+cyclomatic_complexity:
+  warning: 15
+  error: 25
+
+identifier_name:
+  min_length:
+    warning: 1
+  max_length:
+    warning: 50
+  allowed_symbols: ["_"]
+
+type_name:
+  min_length: 3
+  max_length: 50
+
+nesting:
+  type_level: 2
+
+reporter: "xcode"

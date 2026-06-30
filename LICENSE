@@ -1,0 +1,39 @@
+Kenshiki Pulse SDK — Proprietary License
+Copyright © 2026 Kenshiki Labs. All rights reserved.
+
+This software and its source code (the "Software") are the confidential and
+proprietary property of Kenshiki Labs ("Kenshiki"). The Software is licensed,
+not sold.
+
+1. Grant. Subject to a separate written agreement with Kenshiki and your
+   continued compliance with these terms, Kenshiki grants you a limited,
+   non-exclusive, non-transferable, revocable license to use the Software solely
+   to integrate Kenshiki Pulse into your own applications.
+
+2. Restrictions. You may not, except to the extent expressly permitted by a
+   separate written agreement with Kenshiki:
+   (a) copy, modify, or create derivative works of the Software;
+   (b) distribute, sublicense, lease, sell, or otherwise make the Software
+       available to any third party;
+   (c) reverse engineer, decompile, or disassemble the Software, except to the
+       extent such restriction is prohibited by applicable law;
+   (d) remove or alter any proprietary notices contained in the Software.
+
+3. Ownership. Kenshiki retains all right, title, and interest in and to the
+   Software, including all intellectual property rights therein. No rights are
+   granted other than those expressly set forth herein.
+
+4. No Warranty. THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+5. Limitation of Liability. IN NO EVENT SHALL KENSHIKI BE LIABLE FOR ANY CLAIM,
+   DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+   OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+   OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. Termination. This license terminates automatically if you breach any of these
+   terms. Upon termination you must cease all use of the Software and destroy all
+   copies in your possession.
+
+For licensing inquiries, contact legal@kenshiki.com
