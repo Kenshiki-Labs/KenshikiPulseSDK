@@ -61,7 +61,7 @@ The package builds on macOS so model and network tests run without an attached i
 Add the package in Xcode (**File ▸ Add Package Dependencies…**) or in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Kenshiki-Labs/KenshikiPulseSDK.git", from: "0.1.0")
+.package(url: "https://github.com/Kenshiki-Labs/KenshikiPulseSDK.git", from: "1.0.0")
 ```
 
 Then add the `KenshikiPulseSDK` product to your app target and `import KenshikiPulseSDK`.
@@ -76,6 +76,7 @@ Then add the `KenshikiPulseSDK` product to your app target and `import KenshikiP
    maps the returned decision and reason codes into your account-opening or step-up flow.
 
 See [Docs/BackendIntegration.md](Docs/BackendIntegration.md) for the full server-side contract,
+[Docs/EvidenceEnvelope.md](Docs/EvidenceEnvelope.md) for the cryptographic receipt and verification contract,
 and [Docs/UIGuidance.md](Docs/UIGuidance.md) for how to present Pulse to users.
 
 ## Public API at a glance
@@ -200,7 +201,7 @@ swift test
 ## Versioning & support
 
 Semantic versioning. See [CHANGELOG.md](CHANGELOG.md) for releases and
-[SECURITY.md](SECURITY.md) for vulnerability reporting. Current SDK version: **0.1.0**.
+[SECURITY.md](SECURITY.md) for vulnerability reporting. Current SDK version: **1.0.0**.
 
 ## License
 

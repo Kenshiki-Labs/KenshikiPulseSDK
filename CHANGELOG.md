@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] — 2026-06-29
+
+First stable release. No source-breaking changes from `0.1.0`.
+
+### Added
+
+- `Docs/EvidenceEnvelope.md`: the cryptographic receipt and verification contract for
+  `DeviceEvidenceEnvelope` — binding to the device key, freshness, and explicit replay/relay
+  failure modes — linked from the README.
+
+### Changed
+
+- Promoted the SDK to a stable 1.0 API surface.
+
 ## [0.1.0] — 2026-06-29
 
 Initial public release of the Kenshiki Pulse SDK.
@@ -29,5 +43,6 @@ Initial public release of the Kenshiki Pulse SDK.
 
 - iOS 15+ / macOS 13+, Swift 5.9+, no third-party dependencies.
 
-[Unreleased]: https://github.com/Kenshiki-Labs/KenshikiPulseSDK/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/Kenshiki-Labs/KenshikiPulseSDK/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/Kenshiki-Labs/KenshikiPulseSDK/compare/0.1.0...1.0.0
 [0.1.0]: https://github.com/Kenshiki-Labs/KenshikiPulseSDK/releases/tag/0.1.0
